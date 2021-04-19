@@ -10,6 +10,9 @@ namespace ArdalisRating
     /// rating value based on the details.
     /// </summary>
     /// mmd
+    /// // 2
+    /// 
+    /// 
     public class RatingEngine
     {
         public decimal Rating { get; set; }

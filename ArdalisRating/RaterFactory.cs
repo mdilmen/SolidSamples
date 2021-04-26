@@ -25,14 +25,14 @@ namespace ArdalisRating
             //}
 
             try
-            {
-                return (Rater)Activator.CreateInstance(
+            {                
+                    return (Rater)Activator.CreateInstance(
                     Type.GetType($"ArdalisRating.{policy.Type}PolicyRater"), new object[] { engine, engine.Logger });
             }
             catch (Exception)
             {
 
-                return null;
+                return new UnknownPolicyRater(engine,engine.Logger);
             }
         }
     }
